@@ -12,7 +12,8 @@ class PostDetail(DetailView):
 def likeView(request):
     if request.method == "GET":
         i = request.GET.get('i', None)
-        p = Post.objects(id=1)
+        # p = Post.objects(id=1)
+        p = Post.objects.first
         p.likes = p.likes + 1
         p.save()
         data = {'i' : p.likes}

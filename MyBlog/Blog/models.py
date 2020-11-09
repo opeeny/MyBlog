@@ -5,7 +5,7 @@ class Post(models.Model):
     title = models.CharField(max_length = 100)
     description = models.TextField()
     timestamp = models.DateTimeField(default=timezone.now)
-    img = models.ImageField(upload_to='images/')
+    img = models.ImageField(upload_to='uploads/')
     likes = models.IntegerField(default=0)
     # 
     def __str__(self):

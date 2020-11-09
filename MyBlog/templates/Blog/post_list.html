@@ -5,7 +5,7 @@
 <div class="col-6">
 <a id= "h_id" href="{% url 'Blog:post-detail' i.id%}">{{i.title}}</a><br>
 {% if i.img %}
-<img height = "300" width = "300" src="{{i.img.url}}" alt="No image">
+<img height = "150" width = "200" src="{{i.img.url}}" alt="No image">
 {% endif %}
 </div>
 {% endfor %}
