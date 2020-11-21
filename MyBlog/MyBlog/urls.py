@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf.urls.static import static
 from django.conf import settings
+from .api_routers import router
 urlpatterns = [
+     path('', include('Blog.urls', namespace='Blog')),
     path('admin/', admin.site.urls),
-    path('', include('Blog.urls'))
+    path('api/v1/', include(router.urls)),
+    path('api/auth/', include('djoser.urls.authtoken'))
 ]
 
 if settings.DEBUG:

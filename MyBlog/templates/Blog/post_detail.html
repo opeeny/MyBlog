@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 <h3 id = "h_id">{{object.title}}</h3><br>
+ <h3 id = "h_id">{{object.author}}</h3><br>
 <p id ="btext">{{object.description}}</p><br>
 <button type="button" class="btn btn-success" onclick="onClickLike()">Like</button>
 <p id = "like">{{object.likes}}</p>

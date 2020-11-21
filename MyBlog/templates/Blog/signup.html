@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %} The Sblog {% endblock %}
+{% block content %}
+
+
+<div class="wrapper fadeInDown">
+    <h3>MyBlog</h3>
+    <div id="formContent">
+      <!-- Tabs Titles -->
+  
+      <!-- Icon -->
+      <div class="fadeIn first">
+        <i class="far fa-user"></i>
+        <!-- <img src="https://www.iconfinder.com/icons/2203549/download/png/32" height="45" id="icon" alt="User Icon" /> -->
+      </div>
+      
+      <form action = '' method="POST"> 
+        {% csrf_token %}
+        <input type="text" id="login" class="fadeIn second" name="login" placeholder="username">
+        <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+        <input type="submit" class="fadeIn fourth" value="Signup">
+      </form>
+      <div id="formFooter">
+        If already have account &nbsp; &nbsp;<a class="underlineHover" href="{% url 'Blog:signin' %}">Signin?</a> 
+      </div>
+  
+    </div>
+  </div>
+{% endblock %}

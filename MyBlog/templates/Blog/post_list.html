@@ -4,7 +4,7 @@
     {% for i in object_list %}
 <div class="col-6">
 <a id= "h_id" href="{% url 'Blog:post-detail' i.id%}">{{i.title}}</a><br>
-{% if i.img %}
+{% if i.post_image %}
 <img height = "150" width = "200" src="{{i.img.url}}" alt="No image">
 {% endif %}
 </div>
